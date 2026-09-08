@@ -23,3 +23,6 @@ def get_gate_details(command):
 
 def get_all_gates_info():
     return get_all_gates()
+
+def get_gate_details_by_id(gate_id):
+    return get_gate_by_id(gate_id)
