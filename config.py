@@ -3,28 +3,29 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Bot credentials
-API_ID = int(os.getenv("API_ID", 38889620))
-API_HASH = os.getenv("API_HASH", "7dfadd71a3cb2c61aab10297f1176a22")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8533471163:AAFgeWSjCV6oDtA4upGoMg-UrlcIbU43Z4c")
-OWNER_ID = int(os.getenv("OWNER_ID", 5807965902))
+# Bot credentials (using your provided values)
+API_ID = 38889620
+API_HASH = "7dfadd71a3cb2c61aab10297f1176a22"
+BOT_TOKEN = "8315430345:AAHuDdPfKxnt73OnxcJvNvnjJyx74mzZoiw"
+OWNER_ID = 8588291055
+ADMIN_ID = OWNER_ID   # alias
 
-# Channels & groups
-CHANNEL_LINK = os.getenv("CHANNEL_LINK", "https://t.me/AboutKiyotaka")
-GROUP_LINK = os.getenv("GROUP_LINK", "https://t.me/DevXChkrGC")
-CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME", "AboutKiyotaka")   # for membership check
-GROUP_USERNAME = os.getenv("GROUP_USERNAME", "DevXChkrGC")          # for membership check
+# Channels & groups (usernames for membership checks)
+CHANNEL_USERNAME = "DevXChkr"          # from CHANNEL_LINK
+GROUP_USERNAME = "DevXChkrGC"          # assumed from original group name
+CHANNEL_LINK = "https://t.me/DevXChkr"
+GROUP_LINK = "https://t.me/+RnIoo6jIeiJlNzE0"
 
-BOT_USERNAME = os.getenv("BOT_USERNAME", "TGidFreeebot")
-DEV_LINK = os.getenv("DEV_LINK", "https://t.me/SUNIOxRICH")
-UPDATES_LINK = os.getenv("UPDATES_LINK", "https://t.me/AboutKiyotaka")
+BOT_USERNAME = "TesttShopifyBot"
+DEV_LINK = "https://t.me/SUNIOxRICH"
+UPDATES_LINK = "https://t.me/DevXChkr"
 
-# Log groups
-LOGS_CHANNEL_ID = int(os.getenv("LOGS_CHANNEL_ID", -1002554500064))   # replace with your log group ID
-MONITOR_GROUP_ID = int(os.getenv("MONITOR_GROUP_ID", -1002554500064))
-APPROVED_GROUP_ID = int(os.getenv("APPROVED_GROUP_ID", -1002554500064))
+# Log groups (using the ID you provided)
+LOGS_CHANNEL_ID = -1002554500064
+MONITOR_GROUP_ID = -1002554500064
+APPROVED_GROUP_ID = -1002554500064
 
-# Files (for fallback and legacy)
+# Files
 PREMIUM_FILE = "premium.txt"
 SITES_FILE = "sites.txt"
 PROXY_FILE = "proxy.txt"
@@ -35,8 +36,9 @@ ADMINS_FILE = "admins.txt"
 BANNED_FILE = "banned_users.txt"
 GIFS_FILE = "gifs.json"
 KEYS_FILE = "keys.txt"
+RZ_SITES_FILE = "rz_sites.txt"          # ← added
 
-# Shopify APIs (load balanced)
+# Shopify APIs
 SHOPIFY_APIS = [
     "https://web-production-45515a.up.railway.app/shopify",
     "https://apixhello-production.up.railway.app/shopify",
@@ -44,7 +46,7 @@ SHOPIFY_APIS = [
 ]
 RAZORPAY_API_BASE = "https://auto-razorpay-nano.vercel.app/hit"
 
-# Premium emoji IDs (from original)
+# Premium emoji IDs (unchanged)
 PREMIUM_EMOJI_IDS = {
     "✅": "6298612102709909362",
     "❌": "6206110936789423908",
