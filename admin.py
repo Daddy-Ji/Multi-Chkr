@@ -8,10 +8,14 @@ from telethon import events, Button
 from utils import premium_emoji, load_sites, load_proxies, load_razorpay_sites, get_file_lines
 from db import *
 from gates import *
-from config import OWNER_ID, PREMIUM_FILE, SITES_FILE, PROXY_FILE, GIFS_FILE, KEYS_FILE, BANNED_FILE, CONFIG_FILE
+from config import (
+    OWNER_ID, PREMIUM_FILE, SITES_FILE, PROXY_FILE, 
+    GIFS_FILE, KEYS_FILE, BANNED_FILE, CONFIG_FILE,
+    ADMINS_FILE          # <-- added
+)
 from checker import add_gif, remove_gif, get_random_gif, load_gifs
 
-# ---- Admin helpers (from original code) ----
+# ---- Admin helpers ----
 def load_admins():
     if not os.path.exists(ADMINS_FILE):
         return [OWNER_ID]
@@ -102,14 +106,9 @@ def redeem_key(key, user_id):
         return "invalid"
 
 def load_premium_users():
-    # from DB
     conn = get_connection()
     c = conn.cursor()
     c.execute('SELECT user_id FROM users WHERE is_premium = 1')
     rows = c.fetchall()
     conn.close()
     return [row[0] for row in rows]
-
-# ---- (Optional) Admin panel callback handler (can be placed in main.py) ----
-# The main admin panel is defined in main.py; this file only provides helper functions.
-# If you need an inline admin panel callback, you can define it here.
