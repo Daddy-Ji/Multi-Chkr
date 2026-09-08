@@ -11,8 +11,8 @@ OWNER_ID = 8588291055
 ADMIN_ID = OWNER_ID   # alias
 
 # Channels & groups (usernames for membership checks)
-CHANNEL_USERNAME = "DevXChkr"          # from CHANNEL_LINK
-GROUP_USERNAME = "DevXChkrGC"          # assumed from original group name
+CHANNEL_USERNAME = "DevXChkr"
+GROUP_USERNAME = "DevXChkrGC"
 CHANNEL_LINK = "https://t.me/DevXChkr"
 GROUP_LINK = "https://t.me/+RnIoo6jIeiJlNzE0"
 
@@ -20,23 +20,23 @@ BOT_USERNAME = "TesttShopifyBot"
 DEV_LINK = "https://t.me/SUNIOxRICH"
 UPDATES_LINK = "https://t.me/DevXChkr"
 
-# Log groups (using the ID you provided)
+# Log groups
 LOGS_CHANNEL_ID = -1002554500064
 MONITOR_GROUP_ID = -1002554500064
 APPROVED_GROUP_ID = -1002554500064
 
-# Files
+# Files (add ADMINS_FILE)
 PREMIUM_FILE = "premium.txt"
 SITES_FILE = "sites.txt"
 PROXY_FILE = "proxy.txt"
 USER_SITES_FILE = "user_sites.json"
 DAILY_USAGE_FILE = "daily_usage.json"
 CONFIG_FILE = "config.json"
-ADMINS_FILE = "admins.txt"
+ADMINS_FILE = "admins.txt"          # <-- added
 BANNED_FILE = "banned_users.txt"
 GIFS_FILE = "gifs.json"
 KEYS_FILE = "keys.txt"
-RZ_SITES_FILE = "rz_sites.txt"          # ← added
+RZ_SITES_FILE = "rz_sites.txt"
 
 # Shopify APIs
 SHOPIFY_APIS = [
