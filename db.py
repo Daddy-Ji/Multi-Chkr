@@ -276,6 +276,16 @@ def update_payment_status(tx_id, status):
     conn.commit()
     conn.close()
 
+def get_gate_by_id(gate_id):
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute('SELECT id, category_id, name, command, sites, extra_info FROM gates WHERE id = ?', (gate_id,))
+    row = c.fetchone()
+    conn.close()
+    if row:
+        return {"id": row[0], "category_id": row[1], "name": row[2], "command": row[3], "sites": json.loads(row[4]), "extra_info": row[5]}
+    return None
+
 def get_payment_by_tx(tx_id):
     conn = get_connection()
     c = conn.cursor()
